@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+
+body {
+	min-height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: "Karla", Sans-Serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.2;
+
+	background-color: #101020;
+}
+
+.card__container {
+	padding: 4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px dashed #444;
+	border-radius: 20px;
+}
+
+.card {
+	width: 20rem;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border-radius: 2rem;
+	background-color: #ff8769;
+
+	transform-style: preserve-3d;
+}
+
+.card__image {
+	width: 100%;
+	padding: 3rem;
+}
+
+.card__text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card__title {
+	color: #1d1d1d;
+	font-family: "Rakkas", Cursive;
+	font-size: 2.2rem;
+	line-height: 1.1;
+	letter-spacing: 0.1rem;
+
+	text-align: center;
+	padding: 0 3rem;
+	margin-bottom: 1rem;
+}
+
+.card__description {
+	padding: 0 3rem;
+	font-size: 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.card__button {
+	font-size: 1rem;
+	color: #ffffff;
+	font-weight: 500;
+
+	padding: 1.5rem 1.5rem;
+	width: 100%;
+	margin-top: 2rem;
+
+	border-radius: 0 0 2rem 2rem;
+	background-color: #a33c22;
+	transition: all 0.2s ease-in;
+}
+
+.card__button:hover {
+	background-color: #4af0b9;
+}
+
+.card__border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-width: 0.5rem;
+	border-style: solid;
+	border-radius: 2rem;
+	pointer-events: none;
+}
+
+.card__border--01 {
+	border-color: #ff8769;
+}
+
+.card__border--02 {
+	border-color: #4af0b9;
+}
+
+.card__border--03 {
+	border-color: #4af0b9;
+}
+
+.card__border--04 {
+	border-color: #4af0b9;
+}
