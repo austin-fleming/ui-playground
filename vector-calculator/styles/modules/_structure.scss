@@ -1,0 +1,44 @@
+// https://cssgradient.io/
+
+html {
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+body {
+	//background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+	background-image: linear-gradient(
+		to bottom right,
+		#a8edea 0%,
+		#fed6e3 100%
+	);
+
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: "Space Mono", monospace;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.content {
+	width: 100%;
+	max-width: 1200px;
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	//temp
+	//border: 1px solid black;
+}
