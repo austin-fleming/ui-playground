@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Fridays Snowglobe</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-	<link href="main.383eadcc3c2a00c77d03.css" rel="stylesheet"></head>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="main.383eadcc3c2a00c77d03.css" rel="stylesheet" />
+	</head>
 	<body>
 		<div class="preloader">
-			<img src="./assets/preloader-spinner.svg" alt="spinner">
+			<img src="./assets/preloader-spinner.svg" alt="spinner" />
+			<p class="footer__message">Loading</p>
 		</div>
 
 		<main class="snowglobe">
 			<section class="greeting">
 				<div class="greeting__text-wrapper">
 					<h2 class="greeting__text greeting__text--left">
-						<span class="greeting__colorSlide greeting__colorSlide--01" data-content="SEASONS"></span>
-						<span class="greeting__colorSlide greeting__colorSlide--02" data-content="SEASONS"></span><span class="greeting__colorSlide greeting__colorSlide--03" data-content="SEASONS"></span><span class="greeting__colorSlide greeting__colorSlide--04" data-content="SEASONS"></span>
+						<span
+							class="greeting__colorSlide greeting__colorSlide--01"
+							data-content="SEASONS"
+						></span>
+						<span
+							class="greeting__colorSlide greeting__colorSlide--02"
+							data-content="SEASONS"
+						></span
+						><span
+							class="greeting__colorSlide greeting__colorSlide--03"
+							data-content="SEASONS"
+						></span
+						><span
+							class="greeting__colorSlide greeting__colorSlide--04"
+							data-content="SEASONS"
+						></span>
 						SEASONS
 					</h2>
 				</div>
 				<div class="greeting__text-wrapper">
 					<h2 class="greeting__text greeting__text--right">
-						<span class="greeting__colorSlide greeting__colorSlide--01" data-content="GREETINGS"></span>
-						<span class="greeting__colorSlide greeting__colorSlide--02" data-content="GREETINGS"></span><span class="greeting__colorSlide greeting__colorSlide--03" data-content="GREETINGS"></span><span class="greeting__colorSlide greeting__colorSlide--04" data-content="GREETINGS"></span>
+						<span
+							class="greeting__colorSlide greeting__colorSlide--01"
+							data-content="GREETINGS"
+						></span>
+						<span
+							class="greeting__colorSlide greeting__colorSlide--02"
+							data-content="GREETINGS"
+						></span
+						><span
+							class="greeting__colorSlide greeting__colorSlide--03"
+							data-content="GREETINGS"
+						></span
+						><span
+							class="greeting__colorSlide greeting__colorSlide--04"
+							data-content="GREETINGS"
+						></span>
 						GREETINGS
 					</h2>
 				</div>
 			</section>
 			<section id="js-snowglobe" class="snowglobe__globe">
 				<div class="snowglobe__squareContainer">
-					<img id="snowglobe-logo" class="snowglobe__layer snowglobe__swappedGraphic" src="./assets/logo.svg" alt="">
-					<img id="snowglobe-city" class="snowglobe__layer snowglobe__swappedGraphic snowglobe__swappedGraphic--revealed" src="./assets/citySf.svg" alt="">
-					<canvas id="js-snowglobe-canvas" class="snowglobe__layer"></canvas>
-					<object id="js-snowglobe-bounds" class="snowglobe__layer" type="image/svg+xml" data="./assets/bounds.svg"></object>
-					<img class="snowglobe__layer" src="./assets/globe.svg" alt="">
-					<img class="snowglobe__layer" src="./assets/base.svg" alt="">
+					<img
+						id="snowglobe-logo"
+						class="snowglobe__layer snowglobe__swappedGraphic"
+						src="./assets/logo.svg"
+						alt=""
+					/>
+					<img
+						id="snowglobe-city"
+						class="snowglobe__layer snowglobe__swappedGraphic snowglobe__swappedGraphic--revealed"
+						src="./assets/citySf.svg"
+						alt=""
+					/>
+					<canvas
+						id="js-snowglobe-canvas"
+						class="snowglobe__layer"
+					></canvas>
+					<object
+						id="js-snowglobe-bounds"
+						class="snowglobe__layer"
+						type="image/svg+xml"
+						data="./assets/bounds.svg"
+					></object>
+					<img
+						class="snowglobe__layer"
+						src="./assets/globe.svg"
+						alt=""
+					/>
+					<img
+						class="snowglobe__layer"
+						src="./assets/base.svg"
+						alt=""
+					/>
 				</div>
 				<div class="caption">
 					<p class="caption__tagline">FRIDAYS IS SHAKIN' IT UP</p>
@@ -52,7 +111,12 @@
 			<p class="footer__message">
 				Thanks for another great year, from your friends at Fridays!
 			</p>
-			<img class="footer__image" alt="tartan background" src="./assets/fri-tartan-short.jpg">
+			<img
+				class="footer__image"
+				alt="tartan background"
+				src="./assets/fri-tartan-short.jpg"
+			/>
 		</footer>
-	<script src="main.383eadcc3c2a00c77d03.js"></script></body>
+		<script src="main.383eadcc3c2a00c77d03.js"></script>
+	</body>
 </html>

@@ -60,5 +60,7 @@ const apply3dTiltEffect = (cardContainer) => {
 	cardContainer.addEventListener("mouseleave", resetElementStyles);
 };
 
-const cardContainers = document.querySelectorAll(".card__container");
-cardContainers.forEach(apply3dTiltEffect);
+window.addEventListener("load", () => {
+	const cardContainers = document.querySelectorAll(".card__container");
+	cardContainers.forEach(apply3dTiltEffect);
+});
