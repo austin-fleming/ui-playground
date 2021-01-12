@@ -37,6 +37,9 @@ $button-text-size: 1rem;
 	}
 
 	&__calcFigure {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -121,7 +124,8 @@ $button-text-size: 1rem;
 
 .calcFigure {
 	&__simulation {
-		width: 100%;
+		width: 500px;
+		height: 500px;
 	}
 }
 

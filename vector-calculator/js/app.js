@@ -1,5 +1,6 @@
 import { VectorSet } from "./modules/model.js";
 import { ViewEngine } from "./modules/render.js";
+import { simulation } from "./modules/simulation.js";
 
 const getVectorNodes = (parentNode) =>
 	parentNode.querySelectorAll(".calcTable__row--vector");
@@ -38,6 +39,7 @@ export function app() {
 
 			vectorSet.updateVectors();
 			viewEngine.renderVectorTable(vectorSet);
+			simulation(vectorSet);
 		}
 	});
 
@@ -50,6 +52,7 @@ export function app() {
 
 			vectorSet.updateVectors();
 			viewEngine.renderVectorTable(vectorSet);
+			simulation(vectorSet);
 		}
 
 		if (event.target.classList.contains("calcTable__item--add")) {
@@ -57,31 +60,7 @@ export function app() {
 
 			vectorSet.updateVectors();
 			viewEngine.renderVectorTable(vectorSet);
+			simulation(vectorSet);
 		}
 	});
-
-	/* const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	const tableNode = document.querySelector(".calculatorPanel__calcTable");
-	const vectorListNode = tableNode.querySelector(".calcTable__vectorList");
-
-	tableNode.addEventListener("click", (event) => {
-		console.log(event.target);
-
-		if (event.target.classList.contains("calcTable__item--delete")) {
-			const deleteButton = event.target;
-			const vectorRowToDelete = deleteButton.parentNode;
-			removeVector(vectorRowToDelete);
-			nameVectors(vectorListNode, alphabet);
-		}
-
-		if (event.target.classList.contains("calcTable__item--add")) {
-			appendNewVectorHTML(vectorListNode);
-			nameVectors(vectorListNode, alphabet);
-		}
-	});
-
-	const test = new VectorSet(4);
-	test.addEmptyVector();
-
-	console.log(test.vectors); */
 }
