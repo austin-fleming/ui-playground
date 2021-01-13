@@ -4,8 +4,10 @@ class VectorModel {
 	constructor() {
 		this._id = this.generateRandomId();
 		this._name = null;
+		this._isResult = false;
+		this._isHighlighted = false;
 
-		this.vector = new Vector2D(1, 1);
+		this.vector = new Vector2D();
 
 		this.magnitude = this.vector.length;
 		this.angle = this.vector.angle;
@@ -27,6 +29,14 @@ class VectorModel {
 		this._name = `Vector ${name}`;
 	}
 
+	set isResult(isResult) {
+		this._isResult = isResult;
+	}
+
+	set isHighlighted(isHighlighted) {
+		this._isHighlighted = isHighlighted;
+	}
+
 	get x() {
 		return this.vector.x;
 	}
@@ -41,6 +51,14 @@ class VectorModel {
 
 	get name() {
 		return this._name;
+	}
+
+	get isResult() {
+		return this._isResult;
+	}
+
+	get isHighlighted() {
+		return this._isHighlighted;
 	}
 
 	update() {

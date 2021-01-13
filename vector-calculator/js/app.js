@@ -1,6 +1,6 @@
 import { VectorSet } from "./modules/model.js";
 import { ViewEngine } from "./modules/render.js";
-//import { simulation } from "./modules/simulation.js";
+import { simulation } from "./modules/simulation.js";
 
 const getVectorNodes = (parentNode) =>
 	parentNode.querySelectorAll(".calcTable__row--vector");
@@ -60,7 +60,7 @@ export function app() {
 
 			vectorSet.updateVectors();
 			viewEngine.renderVectorTable(vectorSet);
-			//simulation(vectorSet);
+			simulation(vectorSet);
 		}
 	});
 }
