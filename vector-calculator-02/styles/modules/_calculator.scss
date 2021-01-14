@@ -1,0 +1,319 @@
+$button-unit-size: 4rem;
+$button-spacing: 1rem;
+$fillet-size: 0.5rem;
+$button-text-size: 1rem;
+
+.calculator-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+}
+
+.calculatorPanel {
+	position: relative;
+	width: 100%;
+
+	padding: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+	border-radius: $fillet-size;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(20px);
+	border: 2px solid transparent;
+	background-clip: padding-box;
+	box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+
+	z-index: 2;
+
+	&__calcTable {
+	}
+
+	&__calcFigure {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.calcTable {
+	&__row {
+		width: 100%;
+		padding: 0.75rem 1rem;
+		margin-top: 1rem;
+
+		display: grid;
+		grid-template-columns: 5rem repeat(2, 1fr) repeat(2, 0.5fr) 5rem;
+		column-gap: 2rem;
+		align-content: center;
+
+		&--heading {
+		}
+
+		&--vector {
+			border-radius: $fillet-size;
+			background-color: rosybrown;
+
+			background-color: rgba(255, 255, 255, 0.3);
+			backdrop-filter: blur(10px);
+			box-shadow: 0 0rem 0.2rem 0 rgba(0, 0, 0, 0.2);
+
+			&:hover {
+				background-color: rgba(150, 255, 150, 1);
+				box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 150, 75, 0.5);
+			}
+		}
+
+		&--controls {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		justify-self: start;
+		width: 100%;
+
+		&--title {
+		}
+
+		&--input {
+			height: 1.5rem;
+			background-color: transparent;
+			border-bottom: 1px solid black;
+			outline: none;
+
+			&:focus {
+				background-color: rgba(100, 100, 255, 0.2);
+			}
+		}
+
+		&--delete {
+			width: auto;
+			padding: 0.25rem 0.75rem;
+
+			&:hover {
+				background-color: pink;
+			}
+		}
+
+		&--error {
+			background-color: red;
+		}
+
+		&--add {
+			width: auto;
+			padding: 0.25rem 0.75rem;
+
+			&:hover {
+				background-color: greenyellow;
+			}
+		}
+	}
+}
+
+.calcFigure {
+	&__simulation {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+.background__shape {
+	position: absolute;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	background-color: aqua;
+
+	&--01 {
+		background-color: #eec0c6;
+		background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+		left: 0;
+		top: 50%;
+
+		transform: scale(2);
+	}
+
+	&--02 {
+		background-color: #b3cdd1;
+		background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+
+		transform: scale(1.5);
+
+		top: 10%;
+		left: 25%;
+	}
+
+	&--03 {
+		background-color: #f8ceec;
+		background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+
+		right: -10%;
+		top: 60%;
+		transform: scale(2.5);
+	}
+
+	&--04 {
+		background-color: #d5adc8;
+		background-image: linear-gradient(315deg, #d5adc8 0%, #ff8489 74%);
+
+		right: 2%;
+		top: 20%;
+		transform: scale(1);
+	}
+
+	&--05 {
+		background-color: #fad0c4;
+		background-image: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%);
+
+		right: 30%;
+		bottom: 0;
+
+		transform: scale(2);
+	}
+}
+/* .content {
+}
+
+.calculator-wrapper {
+	position: relative;
+
+	&__bgCircle {
+		position: absolute;
+
+		width: 100%;
+		padding-top: 100%;
+
+		border-radius: 50%;
+		z-index: 0;
+
+		&--01 {
+			top: -25%;
+			left: -50%;
+
+			background: rgb(34, 193, 195);
+			background: #be68f0;
+			background: radial-gradient(ellipse at center, #be68f0, #ffffff);
+		}
+
+		&--02 {
+			bottom: -20%;
+			right: -50%;
+
+			transform: scale(0.75);
+			background: #6ad7f2;
+			background: radial-gradient(ellipse at center, #6ad7f2, #ffffff);
+		}
+
+		&--03 {
+			top: -10%;
+			right: -75%;
+
+			transform: scale(0.25);
+
+			background: #ff84f5;
+			background: radial-gradient(ellipse at center, #ff84f5, #ffffff);
+		}
+	}
+}
+
+.calculator {
+	z-index: 1;
+
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+	border-radius: $fillet-size;
+
+	&__uiMode {
+		width: 2rem;
+		height: 0.5rem;
+
+		background-color: #333;
+	}
+
+	&__screen {
+		display: block;
+		width: 100%;
+		padding: $button-spacing;
+		height: $button-unit-size * 2;
+
+		overflow: hidden;
+		overflow-wrap: break-word;
+
+		background-color: transparent;
+
+		outline: none;
+	}
+}
+
+.keys {
+	display: grid;
+	grid-template-columns: repeat(4, $button-unit-size);
+	grid-template-rows: repeat(6, $button-unit-size);
+	padding: $button-spacing;
+
+	gap: $button-spacing / 2;
+
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(2px);
+	box-shadow: 0 -1px 0.5rem 0 rgba(0, 0, 0, 0.1);
+
+	border-radius: $fillet-size;
+
+	border: solid 1px rgba(255, 255, 255, 0.4);
+
+	&__numpad {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	&__key {
+		border-radius: $fillet-size;
+
+		background-color: rgba(255, 248, 220, 0.2);
+		opacity: 0.8;
+		backdrop-filter: blur(5px);
+
+		outline: none;
+
+		border-left: solid 1px rgba(255, 255, 255, 0.4);
+		border-top: solid 1px rgba(255, 255, 255, 0.4);
+		border-right: solid 1px rgba(0, 0, 0, 0.1);
+		border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+
+		filter: drop-shadow(2px 2px 0px rgba(255, 248, 220, 0.1));
+
+		font-size: $button-text-size;
+
+		transition: all 0.2s ease-out;
+
+		&--num {
+			background-color: rgba(222, 184, 135, 0.3);
+		}
+		&--equals {
+			grid-column: span 2;
+		}
+		&:hover {
+			background-color: aqua;
+		}
+
+		&:active {
+			background-color: black;
+		}
+	}
+}
+ */
